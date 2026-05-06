@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320" fill="none" role="img" aria-label="Cairn — evidence-grounded analytics runtime">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="320" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0b0f17"/>
+      <stop offset="0.55" stop-color="#0d121c"/>
+      <stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="rule" x1="80" y1="0" x2="200" y2="0" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#d9a441"/>
+      <stop offset="1" stop-color="#d9a441" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="card" x1="780" y1="88" x2="1120" y2="268" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ffffff" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0.03"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" stroke="#ffffff" stroke-opacity="0.030"/>
+    </pattern>
+    <filter id="blur" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="64"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="320" fill="url(#bg)"/>
+  <rect width="1200" height="320" fill="url(#grid)"/>
+  <circle cx="90" cy="10" r="170" fill="#d9a441" fill-opacity="0.16" filter="url(#blur)"/>
+  <circle cx="1120" cy="330" r="180" fill="#3f8f8a" fill-opacity="0.18" filter="url(#blur)"/>
+
+  <g font-family="'JetBrains Mono', Consolas, monospace" font-size="10" letter-spacing="3" fill="#d9a441">
+    <text x="80" y="62">CAIRN</text>
+    <text x="1120" y="62" text-anchor="end" letter-spacing="2.4" fill="#5d6878">LOCAL-FIRST</text>
+  </g>
+
+  <rect x="80" y="92" width="56" height="56" rx="14" fill="#111827" stroke="#2b3444"/>
+  <g transform="translate(80 92)">
+    <rect x="11" y="38" width="34" height="9" rx="2.6" fill="#f2eee7"/>
+    <rect x="17" y="27" width="25" height="8" rx="2.2" fill="#f2eee7" fill-opacity="0.85"/>
+    <rect x="24" y="18" width="14" height="6.5" rx="2" fill="#d9a441"/>
+  </g>
+
+  <text x="154" y="136" font-family="Inter, 'Segoe UI', system-ui, sans-serif" font-size="54" font-weight="700" letter-spacing="-1.8" fill="#f6f1e8">Cairn</text>
+  <rect x="80" y="164" width="92" height="2" fill="url(#rule)"/>
+  <text x="80" y="196" font-family="Inter, 'Segoe UI', system-ui, sans-serif" font-size="18" fill="#a8b2c1">Evidence-grounded analytics runtime.</text>
+
+  <g font-family="'JetBrains Mono', Consolas, monospace" font-size="10" letter-spacing="1.2">
+    <rect x="80" y="216" width="112" height="28" rx="14" stroke="#2b3444"/>
+    <text x="136" y="234" fill="#c7d0dc" text-anchor="middle">PYTHON 3.12</text>
+    <rect x="200" y="216" width="86" height="28" rx="14" stroke="#2b3444"/>
+    <text x="243" y="234" fill="#c7d0dc" text-anchor="middle">FASTAPI</text>
+    <rect x="294" y="216" width="92" height="28" rx="14" stroke="#2b3444"/>
+    <text x="340" y="234" fill="#c7d0dc" text-anchor="middle">REACT 19</text>
+    <rect x="394" y="216" width="80" height="28" rx="14" stroke="#2b3444"/>
+    <text x="434" y="234" fill="#c7d0dc" text-anchor="middle">SQLITE</text>
+  </g>
+
+  <text x="80" y="286" font-family="'JetBrains Mono', Consolas, monospace" font-size="10" letter-spacing="0.8" fill="#5d6878">github.com/97Three/cairn-data-agent</text>
+
+  <rect x="780" y="88" width="340" height="184" rx="16" fill="#0e131d" fill-opacity="0.94"/>
+  <rect x="780.5" y="88.5" width="339" height="183" rx="15.5" stroke="url(#card)"/>
+  <g font-family="'JetBrains Mono', Consolas, monospace">
+    <text x="804" y="116" font-size="9" letter-spacing="2.2" fill="#5d6878">PRINCIPLES</text>
+    <circle cx="1096" cy="112" r="3" fill="#3f8f6a"/>
+    <text x="804" y="154" font-size="9" letter-spacing="1.8" fill="#6b7688">PLAN</text>
+    <text x="1096" y="154" font-size="10.5" fill="#dbe2ec" text-anchor="end">typed DataPlan</text>
+    <path d="M804 168H1096" stroke="#1b2230"/>
+    <text x="804" y="196" font-size="9" letter-spacing="1.8" fill="#6b7688">EXEC</text>
+    <text x="1096" y="196" font-size="10.5" fill="#dbe2ec" text-anchor="end">deterministic</text>
+    <path d="M804 210H1096" stroke="#1b2230"/>
+    <text x="804" y="238" font-size="9" letter-spacing="1.8" fill="#6b7688">PROOF</text>
+    <text x="1096" y="238" font-size="10.5" fill="#dbe2ec" text-anchor="end">artifact + lineage</text>
+  </g>
+
+  <path d="M0 0H1200" stroke="#ffffff" stroke-opacity="0.06"/>
+  <path d="M0 319H1200" stroke="#ffffff" stroke-opacity="0.06"/>
+</svg>

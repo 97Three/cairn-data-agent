@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="600" viewBox="0 0 1100 600" fill="none" role="img" aria-label="Cairn 架构：客户端 → 有界上下文 → Planner → 契约与策略 → 执行器 → Artifact → 带证据的回答">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" stroke="#ffffff" stroke-opacity="0.028"/>
+    </pattern>
+    <linearGradient id="frame" x1="320" y1="88" x2="800" y2="528" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ffffff" stop-opacity="0.10"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0.03"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10z" fill="#4a5568"/>
+    </marker>
+    <marker id="arrowBlue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10z" fill="#2f6f8f"/>
+    </marker>
+  </defs>
+
+  <rect width="1100" height="600" rx="20" fill="#0b0f17"/>
+  <rect width="1100" height="600" rx="20" fill="url(#grid)"/>
+  <circle cx="120" cy="30" r="160" fill="#d9a441" fill-opacity="0.10" filter="blur(70px)"/>
+  <circle cx="1000" cy="580" r="170" fill="#3f8f8a" fill-opacity="0.14" filter="blur(70px)"/>
+
+  <g font-family="'JetBrains Mono', Consolas, 'Microsoft YaHei', monospace" font-size="9" letter-spacing="2.2" fill="#5d6878">
+    <text x="40" y="90">CLIENTS</text>
+    <text x="344" y="116" letter-spacing="2.2" fill="#8b95a5">CAIRN RUNTIME</text>
+    <text x="840" y="106">GUARANTEES</text>
+    <text x="840" y="440">OUTPUT</text>
+    <text x="840" y="196">MODEL ADAPTER</text>
+  </g>
+
+  <text x="344" y="134" font-family="'JetBrains Mono', Consolas, 'Microsoft YaHei', monospace" font-size="8.5" fill="#5d6878">extensions: Scenario · Knowledge · Skill</text>
+
+  <rect x="40" y="108" width="220" height="76" rx="12" fill="#111827"/>
+  <rect x="40.5" y="108.5" width="219" height="75" rx="11.5" stroke="#2b3444"/>
+  <text x="62" y="140" font-family="Inter, 'Segoe UI', 'Microsoft YaHei', system-ui, sans-serif" font-size="13.5" fill="#e8edf5">React 工作台</text>
+  <text x="62" y="160" font-family="'JetBrains Mono', Consolas, monospace" font-size="9" fill="#6b7688">HTTP API / CLI</text>
+
+  <path d="M262 146H338" stroke="#4a5568" stroke-width="1.2" fill="none" marker-end="url(#arrow)"/>
+
+  <rect x="320" y="88" width="480" height="440" rx="18" fill="#0d121c"/>
+  <rect x="320.5" y="88.5" width="479" height="439" rx="17.5" stroke="url(#frame)"/>
+
+  <g stroke="#2b3444" fill="#151c29">
+    <rect x="344" y="152" width="432" height="48" rx="10"/>
+    <rect x="344" y="212" width="432" height="48" rx="10"/>
+    <rect x="344" y="272" width="432" height="48" rx="10"/>
+    <rect x="344" y="332" width="432" height="48" rx="10"/>
+    <rect x="344" y="392" width="432" height="48" rx="10"/>
+    <rect x="344" y="452" width="432" height="48" rx="10"/>
+  </g>
+
+  <g font-family="Inter, 'Segoe UI', 'Microsoft YaHei', system-ui, sans-serif" font-size="13" font-weight="600" fill="#f2eee7">
+    <text x="366" y="180">有界 Context</text>
+    <text x="366" y="240">Planner</text>
+    <text x="366" y="300">Contract &amp; Policy</text>
+    <text x="366" y="360">Executor</text>
+    <text x="366" y="420">Artifact Store</text>
+    <text x="366" y="480">Answer</text>
+  </g>
+  <g font-family="'JetBrains Mono', Consolas, monospace" font-size="9" fill="#8b95a5">
+    <text x="366" y="194">assets · history · knowledge hits</text>
+    <text x="366" y="254">typed DataPlan / clarification</text>
+    <text x="366" y="314">schema · DAG · asset scope</text>
+    <text x="366" y="374">Polars · retrieval · trusted skill</text>
+    <text x="366" y="434">SHA-256 blob · SQLite metadata</text>
+    <text x="366" y="494">evidence refs from this run</text>
+  </g>
+  <g font-family="'JetBrains Mono', Consolas, monospace" font-size="9.5" fill="#5d6878">
+    <text x="760" y="180" text-anchor="end">01</text>
+    <text x="760" y="240" text-anchor="end">02</text>
+    <text x="760" y="300" text-anchor="end">03</text>
+    <text x="760" y="360" text-anchor="end">04</text>
+    <text x="760" y="420" text-anchor="end">05</text>
+    <text x="760" y="480" text-anchor="end">06</text>
+  </g>
+
+  <g stroke="#4a5568" stroke-width="1.2" fill="none" marker-end="url(#arrow)">
+    <path d="M560 200V209"/>
+    <path d="M560 260V269"/>
+    <path d="M560 320V329"/>
+    <path d="M560 380V389"/>
+    <path d="M560 440V449"/>
+  </g>
+
+  <rect x="840" y="204" width="220" height="64" rx="10" fill="#0e131d"/>
+  <rect x="840.5" y="204.5" width="219" height="63" rx="9.5" stroke="#2f6f8f"/>
+  <text x="858" y="226" font-family="Inter, 'Segoe UI', 'Microsoft YaHei', system-ui, sans-serif" font-size="13" fill="#dbe2ec">fake · offline</text>
+  <text x="858" y="246" font-family="Inter, 'Segoe UI', 'Microsoft YaHei', system-ui, sans-serif" font-size="13" fill="#dbe2ec">OpenAI-compatible</text>
+  <path d="M838 236H780" stroke="#2f6f8f" stroke-width="1.2" stroke-dasharray="4 4" fill="none" marker-end="url(#arrowBlue)"/>
+
+  <rect x="840" y="444" width="220" height="72" rx="10" fill="#0e131d"/>
+  <rect x="840.5" y="444.5" width="219" height="71" rx="9.5" stroke="#2f4d3f"/>
+  <circle cx="858" cy="466" r="3" fill="#3f8f6a"/>
+  <text x="870" y="470" font-family="Inter, 'Segoe UI', 'Microsoft YaHei', system-ui, sans-serif" font-size="13" fill="#dbe2ec">带证据的回答</text>
+  <text x="870" y="490" font-family="'JetBrains Mono', Consolas, monospace" font-size="8.5" fill="#6b7688">artifact refs · lineage</text>
+  <path d="M778 476H836" stroke="#4a5568" stroke-width="1.2" fill="none" marker-end="url(#arrow)"/>
+
+  <g font-family="'JetBrains Mono', Consolas, 'Microsoft YaHei', monospace" font-size="10" fill="#c7d0dc">
+    <circle cx="844" cy="130" r="2.5" fill="#d9a441"/>
+    <text x="858" y="134">typed plan</text>
+    <circle cx="844" cy="152" r="2.5" fill="#d9a441"/>
+    <text x="858" y="156">deterministic</text>
+    <circle cx="844" cy="174" r="2.5" fill="#d9a441"/>
+    <text x="858" y="178">evidence-bound</text>
+  </g>
+</svg>
