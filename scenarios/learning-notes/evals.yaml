@@ -1,0 +1,9 @@
+version: cairn.scenario-evals/v1
+cases:
+  - id: retrieval-citations-offline
+    question: 怎样复习更容易形成长期记忆？
+    assetFixture: ../../examples/learning-notes.md
+    expect:
+      decision: plan
+      finalArtifactKind: evidence
+      evidenceRequired: true

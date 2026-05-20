@@ -1,0 +1,9 @@
+version: cairn.scenario-evals/v1
+cases:
+  - id: budget-variance-offline
+    question: 哪些费用超出了预算？
+    assetFixture: ../../examples/travel-expenses.csv
+    expect:
+      decision: plan
+      finalArtifactKind: table
+      evidenceRequired: true

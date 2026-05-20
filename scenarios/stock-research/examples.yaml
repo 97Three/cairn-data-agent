@@ -1,0 +1,21 @@
+- id: symbol-summary
+  question: 按代码汇总样例期间的平均收盘价和成交量。
+  match: [收盘价, 成交量, 代码, 行情]
+  plan:
+    version: cairn.data-plan/v1
+    goal: 按代码汇总合成历史行情
+    asset_ids: [$selected]
+    steps:
+      - id: input_quality
+        kind: skill
+        skill: tabular-quality@0.1.0
+        input: asset:$tabular
+        arguments: {}
+      - id: by_symbol
+        kind: aggregate
+        input: asset:$tabular
+        group_by: [symbol]
+        metrics:
+          - {column: close, operation: mean, alias: average_close}
+          - {column: volume, operation: mean, alias: average_volume}
+    answer_instruction: 只描述历史合成数据统计，并注明不构成投资建议。

@@ -1,0 +1,16 @@
+apiVersion: cairn.data-agent/v1alpha1
+kind: Skill
+metadata:
+  name: tabular-quality
+  version: 0.1.0
+  description: 提醒 Planner 在分析前关注缺失值和字段类型。
+mode: executable
+effect: read
+entrypoint: handler.py:run
+inputSchema: schemas/input.schema.json
+outputSchema: schemas/output.schema.json
+permissions:
+  network: false
+  filesystem: none
+timeoutSeconds: 10
+maxOutputBytes: 65536

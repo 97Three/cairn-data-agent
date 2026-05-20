@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "input": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "columns", "rows", "rowCount", "columnCount", "truncated"],
+      "properties": {
+        "kind": {"const": "table"},
+        "columns": {"type": "array", "items": {"type": "object"}},
+        "rows": {"type": "array", "items": {"type": "object"}},
+        "rowCount": {"type": "integer", "minimum": 0},
+        "columnCount": {"type": "integer", "minimum": 0},
+        "truncated": {"type": "boolean"}
+      }
+    },
+    "arguments": {"type": "object"}
+  },
+  "required": ["input", "arguments"]
+}

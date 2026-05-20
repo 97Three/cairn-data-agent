@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:cairn:data-agent:contracts:clarification:v1",
+  "title": "Cairn Data Agent Clarification v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["version", "question", "reason"],
+  "properties": {
+    "version": {"const": "cairn.clarification/v1"},
+    "question": {"type": "string"},
+    "reason": {"type": "string"},
+    "options": {
+      "type": "array",
+      "maxItems": 5,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "label"],
+        "properties": {
+          "id": {"type": "string"},
+          "label": {"type": "string"}
+        }
+      }
+    }
+  }
+}

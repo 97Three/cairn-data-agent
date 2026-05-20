@@ -1,0 +1,17 @@
+apiVersion: cairn.data-agent/v1alpha1
+kind: Scenario
+metadata:
+  name: stock-research
+  version: 0.1.0
+  displayName: 行情研究模板
+  description: 使用合成历史行情说明如何把新业务做成扩展包。
+supportedAssetTypes: [csv, xlsx]
+instructions: |
+  本场景只进行历史数据整理，不构成投资建议，不预测收益，也不执行交易。
+  外部行情只能通过显式注册的只读 Skill 接入；离线示例使用合成数据。
+knowledge:
+  - knowledge/safety.md
+skills:
+  - tabular-quality@0.1.0
+examples: examples.yaml
+evaluations: evals.yaml

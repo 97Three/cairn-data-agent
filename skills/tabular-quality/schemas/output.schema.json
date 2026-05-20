@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "kind": {"const": "skill-result"},
+    "check": {"const": "tabular-quality"},
+    "rowCount": {"type": "integer", "minimum": 0},
+    "nullCounts": {
+      "type": "object",
+      "additionalProperties": {"type": "integer", "minimum": 0}
+    },
+    "warnings": {"type": "array", "items": {"type": "string"}}
+  },
+  "required": ["kind", "check", "rowCount", "nullCounts", "warnings"]
+}

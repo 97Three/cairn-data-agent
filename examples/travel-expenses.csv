@@ -1,0 +1,7 @@
+date,category,item,budget_cny,actual_cny
+2026-05-01,transport,train,520,498
+2026-05-01,food,dinner,180,236
+2026-05-02,lodging,hotel,760,760
+2026-05-02,activity,museum,120,96
+2026-05-03,food,lunch,120,158
+2026-05-03,transport,taxi,100,142

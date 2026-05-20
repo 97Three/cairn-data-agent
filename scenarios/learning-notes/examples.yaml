@@ -1,0 +1,14 @@
+- id: review-methods
+  question: 笔记里推荐了哪些提高长期记忆的复习方法？
+  match: [复习, 记忆, 主动回忆, 间隔重复, 学习]
+  plan:
+    version: cairn.data-plan/v1
+    goal: 从所选学习笔记中检索长期记忆和复习方法
+    asset_ids: [$documents]
+    steps:
+      - id: relevant_notes
+        kind: retrieve
+        asset_ids: [$documents]
+        query: 主动回忆 间隔重复 检索练习 复习 记忆
+        top_k: 5
+    answer_instruction: 归纳笔记中的方法，并逐条保留原文行号引用。

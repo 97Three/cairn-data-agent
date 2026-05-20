@@ -1,0 +1,9 @@
+version: cairn.scenario-evals/v1
+cases:
+  - id: history-summary-offline
+    question: 汇总平均收盘价和成交量。
+    assetFixture: ../../examples/synthetic-market.csv
+    expect:
+      decision: plan
+      finalArtifactKind: table
+      evidenceRequired: true

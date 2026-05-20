@@ -1,0 +1,16 @@
+apiVersion: cairn.data-agent/v1alpha1
+kind: Scenario
+metadata:
+  name: learning-notes
+  version: 0.1.0
+  displayName: 学习笔记检索
+  description: 用 Markdown 笔记演示检索、来源定位和证据回答。
+supportedAssetTypes: [markdown]
+instructions: |
+  只根据用户选择的笔记回答。优先引用直接相关段落，并保留文件名和行号。
+  如果没有检索到证据，明确表示笔记中没有足够信息。
+knowledge:
+  - knowledge/citation-rules.md
+skills: []
+examples: examples.yaml
+evaluations: evals.yaml

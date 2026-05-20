@@ -1,0 +1,17 @@
+apiVersion: cairn.data-agent/v1alpha1
+kind: Scenario
+metadata:
+  name: travel-budget
+  version: 0.1.0
+  displayName: 旅行预算分析
+  description: 用合成费用表演示筛选、派生、聚合和证据回答。
+supportedAssetTypes: [csv, xlsx]
+instructions: |
+  比较计划预算与实际花费。金额均按输入字段的币种解释；没有汇率数据时不得换算。
+  先保留原始预算和实际金额，再计算偏差，最后按费用类别汇总。
+knowledge:
+  - knowledge/budget-rules.md
+skills:
+  - tabular-quality@0.1.0
+examples: examples.yaml
+evaluations: evals.yaml

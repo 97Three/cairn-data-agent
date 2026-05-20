@@ -1,0 +1,29 @@
+- id: category-budget-variance
+  question: 哪些旅行费用类别超出了预算？
+  match: [预算, 超支, 费用, 花费]
+  plan:
+    version: cairn.data-plan/v1
+    goal: 按费用类别比较预算和实际支出
+    asset_ids: [$selected]
+    steps:
+      - id: variance
+        kind: derive
+        input: asset:$tabular
+        output_column: variance_cny
+        operation: subtract
+        left_column: actual_cny
+        right_column: budget_cny
+      - id: by_category
+        kind: aggregate
+        input: step:variance
+        group_by: [category]
+        metrics:
+          - {column: budget_cny, operation: sum, alias: budget_cny}
+          - {column: actual_cny, operation: sum, alias: actual_cny}
+          - {column: variance_cny, operation: sum, alias: variance_cny}
+      - id: highest_spend_first
+        kind: sort
+        input: step:by_category
+        by:
+          - {column: actual_cny, descending: true}
+    answer_instruction: 说明总额和超支类别；每项结论都引用最终 Artifact。
