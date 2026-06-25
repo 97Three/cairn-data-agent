@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+repo_root="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+cd "$repo_root"
+
+cleanup() {
+  local child_pids
+  child_pids="$(jobs -pr)"
+  if [[ -n "$child_pids" ]]; then
+    kill $child_pids 2>/dev/null || true
+  fi
+}
+trap cleanup EXIT INT TERM
+
+uv run uvicorn cairn_data_agent.api:app --reload --host 127.0.0.1 --port 8000 &
+npm run dev --prefix web &
+wait
